@@ -461,8 +461,11 @@ def GetNLP(countriesIDNm, commoditiesIDNm, commoditiesIDCode,
 #%%
 if __name__=="__main__":
     
-    nlp = GetNLP(countriesIDNm, commoditiesIDNm, commoditiesIDCode, 
-                 sitesIDNm, companiesIDNm)
+    nlp = GetNLP(countriesIDNm = countriesIDNm, 
+                 commoditiesIDNm = commoditiesIDNm,
+                 commoditiesIDCode = commoditiesIDCode, 
+                 sitesIDNm = sitesIDNm, 
+                 companiesIDNm = companiesIDNm)
     
     AMEComp = nlp.get_pipe('AMEComponent')
     
