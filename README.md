@@ -1,6 +1,6 @@
 # Entity Matcher Using Language Models
 
-# Installation:
+## Installation:
 Open a command window prompt in administrator mode. Then;
 
 	- cd path_to_the_directory_which_includes_setup.py
@@ -8,7 +8,7 @@ Open a command window prompt in administrator mode. Then;
 	- pip install . --user
 	
 	
-# Examples:
+## Examples:
 	from NLP import GetNLP
     nlp = GetNLP(units=True, ame=True)
     
