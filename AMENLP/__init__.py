@@ -1,3 +1,3 @@
 
-name = "AMENLP"
+name = "NLP"
 from .Components import *
