@@ -2,8 +2,8 @@
 
 # Installation:
 Open a command window prompt in administrator mode. Then;
-	> cd path_to_the_directory_which_includes_setup.py
-	> pip install . --user
+	- cd path_to_the_directory_which_includes_setup.py
+	- pip install . --user
 	
 # Examples:
 	from NLP import GetNLP
