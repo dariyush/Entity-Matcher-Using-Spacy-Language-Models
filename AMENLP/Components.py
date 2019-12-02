@@ -31,8 +31,8 @@ def connectionParams(server, database):
 
 
 #%%
-class AMEComponent(object): # self=AMEComponent()
-    name = 'AMEComponent'
+class Component(object): # self=Component()
+    name = 'Component'
    
     def __init__(self, countriesIDNm, commoditiesIDNm, 
                  commoditiesIDCode, sitesIDNm, companiesIDNm):
@@ -449,9 +449,9 @@ def GetNLP(countriesIDNm, commoditiesIDNm, commoditiesIDCode,
     
     nlp = load('en_core_web_sm') 
     
-    AMEComp = AMEComponent(countriesIDNm, commoditiesIDNm, 
+    Comp = Component(countriesIDNm, commoditiesIDNm, 
                  commoditiesIDCode, sitesIDNm, companiesIDNm)
-    nlp.add_pipe( AMEComp ) 
+    nlp.add_pipe( Comp ) 
         
     UnitComp = UnitComponent(nlp)
     nlp.add_pipe( UnitComp )
@@ -467,7 +467,7 @@ if __name__=="__main__":
                  sitesIDNm = sitesIDNm, 
                  companiesIDNm = companiesIDNm)
     
-    AMEComp = nlp.get_pipe('AMEComponent')
+    Comp = nlp.get_pipe('Component')
     
     text = ' ' + """Hartley platinum project, Zimbabwe; Hot Briquetted Iron plant, 
               Yandi iron ore mine expansion and Beenup titanium minerals project, 
@@ -481,10 +481,10 @@ if __name__=="__main__":
     doc = nlp(text)
 
     print( doc.user_data, '\n')
-    print( [AMEComp.countriesIDNm[ctrid] for ctrid in doc._.countries], '\n')
-    print( [AMEComp.commoditiesIDNm[commid] for commid in doc._.commodities] , '\n')
-    print( [AMEComp.sitesIDNm[sid] for sid in doc._.sites] , '\n')
-    print( [AMEComp.companiesIDNm[cid] for cid in doc._.companies] , '\n')
+    print( [Comp.countriesIDNm[ctrid] for ctrid in doc._.countries], '\n')
+    print( [Comp.commoditiesIDNm[commid] for commid in doc._.commodities] , '\n')
+    print( [Comp.sitesIDNm[sid] for sid in doc._.sites] , '\n')
+    print( [Comp.companiesIDNm[cid] for cid in doc._.companies] , '\n')
     print( doc._.units, '\n', doc._.unitTypes , '\n')
     
     from re import split as resplit, search as reSearch
