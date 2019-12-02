@@ -1,4 +1,4 @@
-# Entity Matcher Using Natral Language Processing
+# Entity Matcher Using Language Models
 
 # Installation:
 Open a command window prompt in administrator mode. Then;
